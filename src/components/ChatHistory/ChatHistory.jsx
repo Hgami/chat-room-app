@@ -1,7 +1,8 @@
 /*
+
  This page show the history of previous messages.
  Data gets stored into local storage.
- When click's on refresh button after one hour - Chat messages will be removed.
+ When click's on refresh button after one hour - Chat messages will be removed
 
  */
 
@@ -58,6 +59,8 @@ export const ChatHistory = () => {
 
   return (
     <div className="chat-history-window">
+      <div className="chat-display-title">Welcome {user.name} to Chat Room<br/></div>
+      <hr/> <br/>
       {messageHistory.map((message, index) => {
         if (message.username === user.name) {
           return (
@@ -66,8 +69,8 @@ export const ChatHistory = () => {
               key={message.mid}
               ref={index === messageHistory.length - 1 ? newMessageRef : null}
             >
-              <div className="users-name">you</div>
-              <div>{message.message}</div>
+              <div className="users-name">Me: </div>
+              <div className="user-display">{message.message}</div>
             </div>
           );
         }
@@ -77,7 +80,7 @@ export const ChatHistory = () => {
             key={message.mid}
             ref={index === messageHistory.length - 1 ? newMessageRef : null}
           >
-            <div className="others-name">{message.username}</div>
+            <div className="others-name">{message.username}:</div>
             <div>{message.message}</div>
           </div>
         );
