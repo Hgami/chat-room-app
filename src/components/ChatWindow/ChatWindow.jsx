@@ -3,7 +3,6 @@
  User should be able to send the message.
  */
 
-
 import { useEffect, useState } from "react";
 import { useSocket } from "../../context/socket";
 import { useUser } from "../../context/user";
@@ -36,12 +35,10 @@ export const ChatWindow = () => {
           onKeyDown={(e) => {
             if (e.key === "Enter") onSend();
           }}
-          placeholder="enter your message"
+          placeholder="Enter your message here"
           autoFocus
         />
-        <button className="send-button" onClick={onSend}>
-          send
-        </button>
+        <button className="send-button" onClick={onSend}> Send </button>
       </div>
     </div>
   );
