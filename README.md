@@ -24,18 +24,26 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 
-## More Features to add
+
+## Future features to be added
 
   1. Display the list of Users currently sharing same connection
   2. Show a message into chat display, if a user leaves the chat-room
   3. Allow emojis as Input for sending the message to users 
  
-## Bugs Found 
+
+## Bugs Found
 
   1. Once the user clicks on refresh --> LocalStorage expire time refresers and sets to current time. 
       Thus, only when there is inactivity or user doesnot refresh in between one hour, then only messages will be cleared. 
 
   2. The 'Key,Value' pair in the local message should be cleared and not just display messages.
+  3. Add More test-coverages/Senario's
+
+
+
+Thank you
+Hardik Gami
   
 
   
