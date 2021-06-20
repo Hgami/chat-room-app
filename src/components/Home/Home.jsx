@@ -43,27 +43,40 @@ export const Home = () => {
   }
 
   return (
+
     <div className="home">
-      <h1>Chat App</h1>
-      <div className="user-container">
-        <input
-          type="text"
-          name="username"
-          id="username"
-          data-testid="username-input"
-          className="user-input"
-          placeholder="Enter User name"
-          value={name}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") onEnterRoom();
-          }}
-          onChange={onNameChange}
-          autoFocus
-        />
-        <button className="user-button" onClick={onEnterRoom}>
-          Enter Room
-        </button>
+      <div className="container">
+        <div className="row">
+          <div className="col">
+              <div className="display-login-text">
+              <h1>Chat Room App </h1><br/>
+              <h5><b> Enter your name to join chat room </b></h5>
+             </div>
+          </div>
+          <div className="col">
+            <div className="user-container">
+              <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  data-testid="username-input"
+                  className="user-input"
+                  placeholder="Enter User name"
+                  value={name}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") onEnterRoom();
+                  }}
+                  onChange={onNameChange}
+                  autoFocus
+                  required
+              />
+              <button className="user-button" onClick={onEnterRoom}>
+                Enter Room
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  );
+);
 };

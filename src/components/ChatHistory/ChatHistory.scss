@@ -37,7 +37,7 @@
 
 .chat-display-title{
   text-align: center;
-  font-size: larger;
+  font-size: 2rem;
   color: rgb(236, 224, 224);
   font-weight: 525;
   padding-bottom: 17px;
@@ -66,6 +66,7 @@
 
 //$message-backgound: rgb(255, 255, 255);
 .others-message {
+  font-family: Baghdad;
   border: solid black 1px;
   width: fit-content;
   padding: 10px;

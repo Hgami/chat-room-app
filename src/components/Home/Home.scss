@@ -1,3 +1,5 @@
+$font-family: "Gill Sans";
+
 .home {
   width: 100%;
   height: 100vh;
@@ -7,9 +9,26 @@
   justify-content: space-around;
 
   & > h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #007bff;
   }
+}
+
+h1 {
+  color: #007bff;
+  font-family: $font-family;
+  font-weight: 500;
+  padding-bottom: 1px;
+}
+
+h5{
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: medium;
+}
+
+.display-login-text{
+  text-align: center;
 }
 
 .user- {
@@ -17,13 +36,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-width: 3px;
+    border-style: solid;
+    border-image:
+            linear-gradient(
+                            to bottom,
+                            #007bff,
+                            rgba(0, 0, 0, 0)
+            ) 1 100%;
+
     & > * {
       margin: 10px;
     }
   }
 
   &input {
-    font-size: 2rem;
+    font-family: $font-family;
+    font-size: 1rem;
     padding: 0.5rem;
     width: Min(80vw, 400px);
     border: solid black 1px;
@@ -31,14 +60,16 @@
   }
 
   &button {
+    font-family: $font-family;
     font-size: 1.5rem;
     padding: 0.5rem;
     width: Min(80vw, 400px);
     border: solid black 1px;
     box-shadow: 3px 3px 5px rgb(231, 231, 231);
     border-radius: 10px;
+    color: #007bff;
     &:hover {
-      background-color: rgb(199, 199, 199);
+      background-color: rgb(213, 211, 211);
     }
   }
 }
